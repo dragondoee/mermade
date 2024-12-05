@@ -1,6 +1,6 @@
 const texte = document.getElementById('data');
 const svg = document.querySelector('svg');
-svg.innerHTML = "<rect width='50' height='100' />"
+svg.innerHTML = "<rect width='50' height='50' />"
 document.querySelector('rect').style.transformOrigin='bottom';
 
 fetch('https://marine-api.open-meteo.com/v1/marine?latitude=42.515&longitude=3.1421&current=wave_height,wave_period,wind_wave_height,wind_wave_period&timezone=auto&forecast_days=1').then(response => {
