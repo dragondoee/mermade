@@ -18,6 +18,84 @@ body {
   padding: 0;
 }
 
+
+/* ---------------------------------NAV DÉBUT-------------------------------- */
+
+/* -------------------------------Couleur-------------------------------------- */
+:root {
+  --color1: #023554;
+  --color2: #68D4E1;
+  --color3: #ffff;
+  --color4: #7ddeea;
+}
+
+
+/* ---------------------------------------Nav--------------------------------------- */
+
+nav ul{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 2rem;
+  background-color: var(--color4);
+}
+
+.bgNav{
+  display: flex;
+  background-color: var(--color2);
+  border-radius: 50px;
+  border: #00263d solid 3px;
+}
+
+nav a{
+  font-size: 3vh;
+  text-decoration: none;
+  padding: 1vh;
+  border-radius: 10px;
+}
+
+
+nav img{
+  width: 5vh;
+  margin:1vh ;
+}
+
+.active{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color:var(--color1);
+  border-radius: 30px;
+  color: var(--color3);
+
+}
+
+.deepBlue{
+  color:var(--color2);
+  padding-left: 2vh;
+  padding-right: 2vh;
+}
+
+.blue{
+  color: var(--color1);
+}
+
+
+.non-active{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color2);
+  color: var(--color1);
+  border-radius: 30px;
+  padding-left: 1vh;
+  padding-right: 1vh;
+}
+/* ---------------------------------NAV FIN-------------------------------- */
+
+
 section {
   padding: 8rem 10vw;
 }
