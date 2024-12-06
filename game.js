@@ -99,7 +99,7 @@ fetch('game-data.json').then(function (response) {
             })
 
             if(compteurPartie==3){
-                document.querySelector("body").innerHTML+='<a href="fin.html">Voir les résultats</a>'
+                document.querySelector("body").innerHTML+='<a href="fin.html?score='+totalScore+'">Voir les résultats</a>'
             }
 
 
