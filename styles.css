@@ -289,7 +289,7 @@ section {
 .about p {
   font-size: 1.2rem;
   color: white;
-  max-width: 800px;
+  max-width: 600px;
   margin: 0 auto;
   min-width: 400px;
 }
@@ -315,11 +315,11 @@ section {
   text-align: center;
   max-width: 800px;
   min-width: 400px;
-  background-color: #48b9c8;
+  background-color: #29aec0;
   padding: 2.5rem;
   border-radius: 15px;
-  margin-top: 5rem;
-  margin-bottom: 5rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 .about .bateau {
@@ -445,6 +445,7 @@ section {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  padding-top: 0;
 }
 
 .apropos .container {
@@ -467,7 +468,6 @@ section {
 .apropos p {
   font-size: 1.2rem;
   color: white;
-  text-align: justify;
   max-width: 800px;
   min-width: 400px;
 }
@@ -582,4 +582,87 @@ section {
     background-position-x: 1500px;
     transform: rotateY('100px');
   }
+  }
+
+.faq h2 {
+  font-family: 'titre';
+  font-size: 3rem;
+}
+/*                                                      style du jeu sirene                                 */
+.part{
+  font-size: larger;
+  color: #00263d;
+  
+}
+
+.sirene{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.sirene img{
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.button-choice{
+  background-color: #0235540f;
+  color: #00263d;
+  border: none;
+  padding: 10px 20px;
+  margin: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  padding: 3vh;
+  font-size: 1rem;
+}
+
+.situation{
+  display: none;
+  font-weight: bold;
+  max-width: 800px;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  color:#00263d ;
+  display: flex;
+  justify-content: center;
+}
+
+.consequence{
+  display: none;
+  font-weight: bold;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  color:#00263d ;
+  background-color: #587b7f23;
+}
+
+p{
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+}
+
+.choice{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 30vh;
+  justify-content: center;
+  text-align: center;
+}
+
+.next-game button{
+  background-color:#00263d;
+  color: white;
+  border: none;
+  padding: 10px 40px;
+  margin: 4px;
+  cursor: pointer;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 2vh;
 }

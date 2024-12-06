@@ -19,6 +19,7 @@ fetch('game-data.json').then(function (response) {
         const divSirene = document.querySelector(".sirene")
         const divSituation = document.querySelector(".situation")
         const divConsequence = document.querySelector(".consequence")
+        const divOrgane = document.querySelector(".organe")
 
         // Boutons
         var boutonsPartie = document.querySelectorAll(".sirene-button")
@@ -42,7 +43,8 @@ fetch('game-data.json').then(function (response) {
                     data.forEach(function (part) {
                         if (boutonPartie.classList.contains(part.part)) {
                             partie = part
-                            console.log(part.part)
+                            console.log(part)
+                            divOrgane.innerHTML = `<h2 class="organe">${part.organe}</h2>`
                             // Afficher la situation et les différents choix
                             document.querySelector(".situation img").src = ""
                             document.querySelector(".situation .txt-game p").innerHTML = part.situation
