@@ -20,6 +20,20 @@ body {
 }
 
 
+.evitement {
+    display: inline-block;
+    color: #555;
+    background: #fff;
+    padding: .5em;
+    position: absolute;
+    left: -99999rem;
+    z-index: 100;       
+}
+
+a.evitement:focus {
+    left: 0;
+}
+
 /* ---------------------------------NAV DÉBUT-------------------------------- */
 
 /* -------------------------------Couleur-------------------------------------- */
@@ -101,12 +115,13 @@ nav img {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--color2);
+  background-color: #97c4ca;
   color: var(--color1);
   border-radius: 30px;
   padding-left: 1vh;
   padding-right: 1vh;
   transform: scale(1);
+  
   /* État initial sans mise en avant */
 }
 
@@ -147,7 +162,7 @@ section {
 .accueil h1 {
   font-family: 'titre';
   font-size: 7vw;
-  color: white;
+  color: var(--color1);
   text-align: center;
   margin: 0;
   padding: 0;
@@ -315,7 +330,7 @@ section {
   text-align: center;
   max-width: 800px;
   min-width: 400px;
-  background-color: #29aec0;
+  background-color: #000000;
   padding: 2.5rem;
   border-radius: 15px;
   margin-top: 2rem;
@@ -418,6 +433,10 @@ section {
   }
 }
 
+body:focus {
+  outline: red 1px solid;
+}
+
 .accordion-container {
   display: flex;
   flex-direction: column;
@@ -473,7 +492,8 @@ section {
 }
 
 .apropos h3 {
-  font-size: 2.5rem;
+  font-size: 1.8rem;
+  font-weight: bold;
 }
 
 
@@ -665,4 +685,12 @@ p{
   border-radius: 10px;
   font-weight: bold;
   font-size: 2vh;
+}
+
+.api h2 {
+  font-size: 1.5rem;
+  color: white;
+  text-align: center;
+  padding: 0;
+  text-transform: uppercase;
 }
