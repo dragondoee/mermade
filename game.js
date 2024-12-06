@@ -60,12 +60,12 @@ fetch('game-data.json').then(function (response) {
         // Cache situation + Affiche conséquence
         boutonsChoix.forEach(function (boutonChoix) {
             boutonChoix.addEventListener("click", function () {
-                choix = boutonChoix.classList[1]
+                choix = boutonChoix.classList[1][6]
                 console.log(choix)
                 divSituation.style.display = "none"
                 divConsequence.style.display = "block"
                 // Afficher la conséquence ( texte + image + gain de points)
-                document.querySelector(".consequence .txt-game").innerHTML = part.choices
+                document.querySelector(".consequence .txt-game").innerHTML = partie.choices[choix].consequence
             });
         });
 
@@ -78,8 +78,8 @@ fetch('game-data.json').then(function (response) {
             // Mettre à jour le status de la partie ( bien ou mal )
 
             // Désactiver le bouton de la partie
-            // if (boutonPartie.classList.contains("partie actuelle")) {
-            //     boutonPartie.classList.remove("active")
+            // if (boutonPartie.classList.contains(partie)) {
+                // boutonPartie.classList.remove("active")
             // Changer son style selon son status
             // }
 
