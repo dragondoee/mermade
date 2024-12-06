@@ -52,7 +52,6 @@ fetch('game-data.json').then(function (response) {
 
             });
 
-
         });
 
 
