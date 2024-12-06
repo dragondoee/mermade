@@ -13,6 +13,7 @@ fetch('game-data.json').then(function (response) {
         var index = 0
         var score = 0
         var totalScore = 0
+        var compteurPartie = 0
 
         // Section
         const divSirene = document.querySelector(".sirene")
@@ -87,18 +88,27 @@ fetch('game-data.json').then(function (response) {
             boutonsPartie.forEach(function (boutonPartie) {
                 if (boutonPartie.classList.contains(partie.part)) {
                     boutonPartie.classList.remove("active")
+                    compteurPartie++
                     // Changer son style selon son status
-                    // boutonPartie.classList.add()
+                    if(score>0){
+                        boutonPartie.classList.add("good-choice")
+                    } else {
+                        boutonPartie.classList.add("bad-choice")
+                    }
                 }
             })
 
+            if(compteurPartie==3){
+                document.querySelector("body").innerHTML+='<a href="fin.html">Voir les résultats</a>'
+            }
+
+
+
+
+
+
 
         });
-
-        // ================================================ Système de choix ==========================================================
-
-        // ================================================== Système de point ========================================================
-
 
 
 
