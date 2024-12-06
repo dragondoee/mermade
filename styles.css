@@ -1,0 +1,376 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar {
+  width: 0.01rem;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+
+/* ---------------------------------NAV DÉBUT-------------------------------- */
+
+/* -------------------------------Couleur-------------------------------------- */
+:root {
+  --color1: #023554;
+  --color2: #68D4E1;
+  --color3: #ffff;
+  --color4: #7ddeea;
+}
+
+
+/* ---------------------------------------Nav--------------------------------------- */
+
+nav ul{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 2rem;
+  background-color: var(--color4);
+}
+
+.bgNav{
+  display: flex;
+  background-color: var(--color2);
+  border-radius: 50px;
+  border: #00263d solid 3px;
+}
+
+nav a{
+  font-size: 3vh;
+  text-decoration: none;
+  padding: 1vh;
+  border-radius: 10px;
+}
+
+
+nav img{
+  width: 5vh;
+  margin:1vh ;
+}
+
+.active{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color:var(--color1);
+  border-radius: 30px;
+  color: var(--color3);
+
+}
+
+.deepBlue{
+  color:var(--color2);
+  padding-left: 2vh;
+  padding-right: 2vh;
+}
+
+.blue{
+  color: var(--color1);
+}
+
+
+.non-active{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color2);
+  color: var(--color1);
+  border-radius: 30px;
+  padding-left: 1vh;
+  padding-right: 1vh;
+}
+/* ---------------------------------NAV FIN-------------------------------- */
+
+
+section {
+  padding: 8rem 10vw;
+}
+
+.montserrat {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* ACCUEIL */
+
+.accueil {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: 
+  url(images/vague3.svg), 
+  url(images/vague2.svg),
+  url(images/épave.svg),
+  url(images/rayons.svg);
+  background-repeat: no-repeat;
+  background-size: contain, contain, contain;
+  background-position: 0% 100%,  0% 100%, 0% 95%, 50% 0%; 
+  margin: 0;
+  padding: 0;
+  background-color: #7ddeea;
+}
+
+.accueil h1 {
+  font-family: 'titre';
+  font-size: 7vw;
+  color: white;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  bottom: 100px;
+  animation: wiggle 1s ease-out forwards infinite alternate-reverse; 
+}
+
+
+@keyframes wiggle {
+  0% {
+      transform: rotate(0deg);
+  }
+  25% {
+      transform: rotate(2deg);
+  }
+  50% {
+      transform: rotate(-2deg);
+  }
+  75% {
+      transform: rotate(1deg);
+  }
+  100% {
+      transform: rotate(0deg);
+  }
+}
+
+/* Animation pour le pop */
+@keyframes popIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.5) translateY(-100px) rotate(-20deg);
+  }
+  25% {
+    opacity: 0.3;
+    transform: scale(1.2) translateY(20px) rotate(10deg);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(0.9) translateY(-10px) rotate(-5deg);
+  }
+  75% {
+    opacity: 0.9;
+    transform: scale(1.05) translateY(5px) rotate(2deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0) rotate(0deg);
+  }
+}
+
+@font-face {
+  font-family: 'titre';
+  src: url(polices/Super\ Ocean\ Personal\ Use.woff),
+    url(polices/Super\ Ocean\ Personal\ Use.woff2);
+}
+
+.manrope {
+  font-family: 'Manrope', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+}
+
+.accueil .bulles {
+  width: 5%;
+  transform: rotate(120deg);
+  position: relative;
+  right: 5%;
+}
+
+.accueil .bulles2 {
+  width: 10%;
+  position: relative;
+  bottom: 30%;
+}
+
+.bulles, .bulles2 {
+  position: absolute;
+  animation: float 10s infinite ease-in-out; 
+  opacity: 0.8; 
+}
+
+
+@keyframes float {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  25% {
+    transform: translate(-20px, -30px) rotate(15deg);
+  }
+  50% {
+    transform: translate(30px, 10px) rotate(-10deg);
+  }
+  75% {
+    transform: translate(-10px, 20px) rotate(5deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+}
+
+
+.about {
+  background-color: #023554;
+  margin-top: -5px;
+}
+
+.about h2 {
+  font-family: 'titre';
+  font-size: 3rem;
+  color: white;
+  text-align: left;
+  padding: 0;
+  text-transform: uppercase;
+  width: fit-content;
+}
+
+.about img {
+  margin-top: 2rem;
+  width: 160px;
+  float: right;
+  position: relative;
+  bottom: 6rem;
+}
+
+.about p {
+  font-size: 1.2rem;
+  color: white;
+  text-align: justify;
+  padding: 0;
+  margin: 0;
+  max-width: 800px;
+  margin: 0 auto;
+  min-width: 400px;
+}
+
+.about .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+/* SECTION ACTIVITES */
+
+.activites {
+  background-image: url(images/fonds.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #00263d;
+  z-index: -1;
+}
+
+.activites h2 {
+  font-family: 'titre';
+  font-size: 3rem;
+  color: white;
+  text-align: right;
+  padding: 0;
+  text-transform: uppercase;
+  margin-top: 5rem;
+}
+
+.activites h3 {
+  font-size: 2.5rem;
+  color: white;
+  padding: 0;
+  text-transform: uppercase;
+  margin-top: 5rem;
+  margin-bottom: 0;
+}
+
+.activites p {
+  font-size: 1.2rem;
+  color: white;
+  max-width: 400px;
+  min-width: 400px;
+}
+
+.activites a {
+  font-size: 1rem;
+  color: white;
+  margin-top: 2rem;
+}
+
+.activites .share {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+}
+
+.activites .share p {
+    text-align: right;
+    margin-left: auto;
+}
+
+
+/* SECTION FAQ */
+
+.faq {
+  background-color: #00263d;
+  color: #fff;
+}
+
+.faq h2 {
+  padding: 24px;
+  margin: 0;
+  font-family: 'titre', sans-serif;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.accordion-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+@media (min-width: 768px) {
+  .accordion-grid {
+    padding: 0 32px;
+    max-width: 1280px;
+    margin: 0 auto;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  }
+}
+
+.accordion-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.accordion-container img {
+  width: calc(100%);
+}
+
+.accordion-container .accordion {
+  position: relative;
+  top: -32px;
+}
