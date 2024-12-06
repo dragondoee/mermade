@@ -16,6 +16,7 @@ html::-webkit-scrollbar {
 body {
   margin: 0;
   padding: 0;
+  background-color: var(--color1);
 }
 
 
@@ -35,13 +36,13 @@ body {
 header {
   position: fixed;
   top: 0;
-  left: 0; 
-  right: 0; 
+  left: 0;
+  right: 0;
   padding: 2rem;
   margin: 0 auto;
-  display: flex; 
-  justify-content: center; 
-  align-items: center; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
   z-index: 10;
 }
 
@@ -51,19 +52,19 @@ nav ul {
   justify-content: center;
   list-style-type: none;
   margin: 0;
-  padding: 0; 
+  padding: 0;
   background-color: transparent;
 }
 
 
-.bgNav{
+.bgNav {
   display: flex;
   background-color: transparent;
   border-radius: 50px;
   border: #00263d solid 3px;
 }
 
-nav a{
+nav a {
   font-size: 3vh;
   text-decoration: none;
   padding: 1vh;
@@ -71,27 +72,27 @@ nav a{
 }
 
 
-nav img{
+nav img {
   width: 5vh;
-  margin:1vh ;
+  margin: 1vh;
 }
 
-.active{
+.active {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color:var(--color1);
+  background-color: var(--color1);
   border-radius: 30px;
   color: var(--color3);
 }
 
-.deepBlue{
-  color:var(--color2);
+.deepBlue {
+  color: var(--color2);
   padding-left: 2vh;
   padding-right: 2vh;
 }
 
-.blue{
+.blue {
   color: var(--color1);
 }
 
@@ -105,8 +106,10 @@ nav img{
   border-radius: 30px;
   padding-left: 1vh;
   padding-right: 1vh;
-  transform: scale(1); /* État initial sans mise en avant */
+  transform: scale(1);
+  /* État initial sans mise en avant */
 }
+
 /* ---------------------------------NAV FIN-------------------------------- */
 
 
@@ -128,14 +131,14 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: 
-  url(images/vague3.svg), 
-  url(images/vague2.svg),
-  url(images/épave.svg),
-  url(images/rayons.svg);
+  background-image:
+    url(images/vague3.svg),
+    url(images/vague2.svg),
+    url(images/épave.svg),
+    url(images/rayons.svg);
   background-repeat: no-repeat;
   background-size: contain, contain, contain;
-  background-position: 0% 100%,  0% 100%, 0% 95%, 50% 0%; 
+  background-position: 0% 100%, 0% 100%, 0% 95%, 50% 0%;
   margin: 0;
   padding: 0;
   background-color: #7ddeea;
@@ -150,25 +153,29 @@ section {
   padding: 0;
   position: relative;
   bottom: 100px;
-  animation: wiggle 1s ease-out forwards infinite alternate-reverse; 
+  animation: wiggle 1s ease-out forwards infinite alternate-reverse;
 }
 
 
 @keyframes wiggle {
   0% {
-      transform: rotate(0deg);
+    transform: rotate(0deg);
   }
+
   25% {
-      transform: rotate(2deg);
+    transform: rotate(2deg);
   }
+
   50% {
-      transform: rotate(-2deg);
+    transform: rotate(-2deg);
   }
+
   75% {
-      transform: rotate(1deg);
+    transform: rotate(1deg);
   }
+
   100% {
-      transform: rotate(0deg);
+    transform: rotate(0deg);
   }
 }
 
@@ -178,18 +185,22 @@ section {
     opacity: 0;
     transform: scale(0.5) translateY(-100px) rotate(-20deg);
   }
+
   25% {
     opacity: 0.3;
     transform: scale(1.2) translateY(20px) rotate(10deg);
   }
+
   50% {
     opacity: 0.6;
     transform: scale(0.9) translateY(-10px) rotate(-5deg);
   }
+
   75% {
     opacity: 0.9;
     transform: scale(1.05) translateY(5px) rotate(2deg);
   }
+
   100% {
     opacity: 1;
     transform: scale(1) translateY(0) rotate(0deg);
@@ -222,10 +233,11 @@ section {
   bottom: 30%;
 }
 
-.bulles, .bulles2 {
+.bulles,
+.bulles2 {
   position: absolute;
-  animation: float 10s infinite ease-in-out; 
-  opacity: 0.8; 
+  animation: float 10s infinite ease-in-out;
+  opacity: 0.8;
 }
 
 
@@ -233,15 +245,19 @@ section {
   0% {
     transform: translate(0, 0) rotate(0deg);
   }
+
   25% {
     transform: translate(-20px, -30px) rotate(15deg);
   }
+
   50% {
     transform: translate(30px, 10px) rotate(-10deg);
   }
+
   75% {
     transform: translate(-10px, 20px) rotate(5deg);
   }
+
   100% {
     transform: translate(0, 0) rotate(0deg);
   }
@@ -316,7 +332,7 @@ section {
 
 .activites {
   background-image: url(images/fonds.svg),
-  url(images/fonds2.svg);
+    url(images/fonds2.svg);
   background-repeat: no-repeat;
   background-size: contain, 100%;
   background-color: #00263d;
@@ -366,8 +382,8 @@ section {
 }
 
 .activites .share p {
-    text-align: right;
-    margin-left: auto;
+  text-align: right;
+  margin-left: auto;
 }
 
 
@@ -431,7 +447,7 @@ section {
   flex-direction: column;
 }
 
-.apropos .container{
+.apropos .container {
   max-width: 400px;
   display: flex;
   justify-content: center;

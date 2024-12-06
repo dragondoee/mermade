@@ -17,10 +17,10 @@
   },
   {
     "part": "heart",
-    "situation": "Tu veux t'éduquer de manière fun sur l'impact du réchauffement climatique",
+    "situation": "Tu veux t'éduquer sur l'impact du réchauffement climatique sur les glaciers. Tu décides de :",
     "choices": [
       {
-        "choice": "Partir en croisière éducative pour voir les impacts du réchauffement climatique sur les glaciers",
+        "choice": "Partir en croisière éducative pour voir par toi-même ce qu'ils deviennent.",
         "value": -1,
         "consequence": "C'est assez ironique de partir en croisière pour se sensibiliser à la fonte des glaces alors que les bateaux contribuent autant que l'aviation au réchauffement climatique. L'ajout de l'eau douce des glaciers à l'eau salée des océans perturbe les courants permettant à ce dernier de réguler sa température. Une des missions de Race For Water est justement de responsabiliser la navigation."
       },
