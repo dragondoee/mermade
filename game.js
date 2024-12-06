@@ -34,21 +34,23 @@ fetch('game-data.json').then(function (response) {
                 if (boutonPartie.classList.contains("active")) {
                     divSirene.style.display = "none"
                     divSituation.style.display = "block"
-                }
+                
                 data.forEach(function (part) {
                     if (boutonPartie.classList.contains(part.part)) {
                         partie = part
                         console.log(part.part)
                         // Afficher la situation et les différents choix
                         document.querySelector(".situation img").src = "img/situation/" + part.part + ".jpg"
-                        document.querySelector(".situation .txt-game").innerHTML = part.situation
-                        part.choices.forEach(function () {
-                            boutonsChoix[index].innerHTML = part.choices[index].choice
+                        document.querySelector(".situation .txt-game p").innerHTML = part.situation
+                        part.choices.forEach(function (choice) {
+                            boutonsChoix[index].innerHTML = choice.choice
                             index++
                         })
+                        index = 0
 
                     }
                 })
+            }
 
             });
 
@@ -65,7 +67,7 @@ fetch('game-data.json').then(function (response) {
                 divSituation.style.display = "none"
                 divConsequence.style.display = "block"
                 // Afficher la conséquence ( texte + image + gain de points)
-                document.querySelector(".consequence .txt-game").innerHTML = partie.choices[choix].consequence
+                document.querySelector(".consequence .txt-game p").innerHTML = partie.choices[choix].consequence
             });
         });
 
@@ -78,10 +80,14 @@ fetch('game-data.json').then(function (response) {
             // Mettre à jour le status de la partie ( bien ou mal )
 
             // Désactiver le bouton de la partie
-            // if (boutonPartie.classList.contains(partie)) {
-                // boutonPartie.classList.remove("active")
-            // Changer son style selon son status
-            // }
+            boutonsPartie.forEach(function (boutonPartie) {
+                if (boutonPartie.classList.contains(partie.part)) {
+                    boutonPartie.classList.remove("active")
+                    // Changer son style selon son status
+                    // boutonPartie.classList.add()
+                }
+            })
+
 
         });
 
