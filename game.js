@@ -21,7 +21,7 @@ fetch('game-data.json').then(function (response) {
         const divConsequence = document.querySelector(".consequence")
 
         // Boutons
-        var boutonsPartie = document.querySelectorAll(".sirene button")
+        var boutonsPartie = document.querySelectorAll(".sirene-button")
         var boutonsChoix = document.querySelectorAll(".button-choice")
         var boutonSuivant = document.querySelector(".next-game button")
 
