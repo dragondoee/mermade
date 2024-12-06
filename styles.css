@@ -22,19 +22,28 @@ section {
   padding: 8rem 10vw;
 }
 
+.montserrat {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* ACCUEIL */
+
 .accueil {
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url(images/vague3.svg), url(images/vague2.svg),
-    url(images/épave.svg), url(images/bulles.svg), url(images/bulles2.svg);
+  background-image: 
+  url(images/vague3.svg), 
+  url(images/vague2.svg),
+  url(images/épave.svg),
+  url(images/rayons.svg);
   background-repeat: no-repeat;
-  background-size: contain, contain, contain, 40px, 40px;
-  background-position: 0% 100%, /* vague3 : bas à gauche */ 0% 100%,
-    /* vague2 : bas à gauche */ 0% 95%,
-    /* épave : bas à gauche */ calc(85% - 50px) 25%,
-    /* bulles : en haut à droite */ 20% calc(55% - 50px); /* bulles2 : en bas à gauche */
+  background-size: contain, contain, contain;
+  background-position: 0% 100%,  0% 100%, 0% 95%, 50% 0%; 
   margin: 0;
   padding: 0;
   background-color: #7ddeea;
@@ -42,13 +51,57 @@ section {
 
 .accueil h1 {
   font-family: 'titre';
-  font-size: 3rem;
+  font-size: 7vw;
   color: white;
   text-align: center;
   margin: 0;
   padding: 0;
   position: relative;
   bottom: 100px;
+  animation: wiggle 1s ease-out forwards infinite alternate-reverse; 
+}
+
+
+@keyframes wiggle {
+  0% {
+      transform: rotate(0deg);
+  }
+  25% {
+      transform: rotate(2deg);
+  }
+  50% {
+      transform: rotate(-2deg);
+  }
+  75% {
+      transform: rotate(1deg);
+  }
+  100% {
+      transform: rotate(0deg);
+  }
+}
+
+/* Animation pour le pop */
+@keyframes popIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.5) translateY(-100px) rotate(-20deg);
+  }
+  25% {
+    opacity: 0.3;
+    transform: scale(1.2) translateY(20px) rotate(10deg);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(0.9) translateY(-10px) rotate(-5deg);
+  }
+  75% {
+    opacity: 0.9;
+    transform: scale(1.05) translateY(5px) rotate(2deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0) rotate(0deg);
+  }
 }
 
 @font-face {
@@ -63,6 +116,45 @@ section {
   font-weight: normal;
   font-style: normal;
 }
+
+.accueil .bulles {
+  width: 5%;
+  transform: rotate(120deg);
+  position: relative;
+  right: 5%;
+}
+
+.accueil .bulles2 {
+  width: 10%;
+  position: relative;
+  bottom: 30%;
+}
+
+.bulles, .bulles2 {
+  position: absolute;
+  animation: float 10s infinite ease-in-out; 
+  opacity: 0.8; 
+}
+
+
+@keyframes float {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  25% {
+    transform: translate(-20px, -30px) rotate(15deg);
+  }
+  50% {
+    transform: translate(30px, 10px) rotate(-10deg);
+  }
+  75% {
+    transform: translate(-10px, 20px) rotate(5deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+}
+
 
 .about {
   background-color: #023554;
@@ -105,6 +197,8 @@ section {
   align-items: center;
   margin-bottom: 2rem;
 }
+
+/* SECTION ACTIVITES */
 
 .activites {
   background-image: url(images/fonds.svg);
@@ -151,6 +245,12 @@ section {
   display: flex;
   flex-direction: column;
 }
+
+.activites .share p {
+    text-align: right;
+    margin-left: auto;
+}
+
 
 /* SECTION FAQ */
 
