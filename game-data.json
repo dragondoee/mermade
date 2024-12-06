@@ -6,17 +6,33 @@
       {
         "choice": "Le plastique est super utile, c'est pas si grave si on en a un peu",
         "value": -1,
-        "consequence": "Le plastique est super utile, c'est vrai. Mais il est aussi très polluant. En se dégradant, il se transforme en microplastiques qui se retrouvent dans l'eau et la nourriture. C'est pas si grave si on en a un peu, mais si tout le monde pense comme toi, ça peut vite devenir un problème."
+        "consequence": "Le plastique est super utile, c'est vrai. Mais il est aussi très polluant. En se dégradant, il se transforme en microplastiques qui se retrouvent dans l'eau et la nourriture. C'est pas si grave si on en a un peu, mais si tout le monde pense comme toi, ça peut vite devenir un problème. Race for Water a justement pour mission de réduire la dépendance que nous avons pour le plastique."
       },
       {
         "choice": "Utiliser l'alternative responsable au plastique.",
         "value": 1,
-        "consequence": "Utiliser l'alternative responsable au plastique est un bon choix. C'est vrai que leur production a un impact, mais il est bien moins important que celui du plastique. Il est tout de même important de réfléchir à comment éliminer les microplastiques déjà présents dans l'océan. C'est une des missions de Race for Water."
+        "consequence": "Utiliser l'alternative responsable au plastique est un bon choix. C'est vrai que leur production a un impact, mais il est bien moins important que celui du plastique."
       }
     ]
   },
   {
     "part": "heart",
+    "situation": "Tu veux t'éduquer de manière fun sur l'impact du réchauffement climatique",
+    "choices": [
+      {
+        "choice": "Partir en croisière éducative pour voir les impacts du réchauffement climatique sur les glaciers",
+        "value": -1,
+        "consequence": "C'est assez ironique de partir en croisière pour se sensibiliser à la fonte des glaces alors que les bateaux contribuent autant que l'aviation au réchauffement climatique. L'ajout de l'eau douce des glaciers à l'eau salée des océans perturbe les courants permettant à ce dernier de réguler sa température. Une des missions de Race For Water est justement de responsabiliser la navigation."
+      },
+      {
+        "choice": "Faire une formation de sensibilisation en ligne",
+        "value": 1,
+        "consequence": "Faire une formation de sensibilisation en ligne est un bon choix. C'est une manière de s'informer avec un impact moins important sur l'environnement. La sensibilisation est une étape essentielle avant de passer à l'action."
+      }
+    ]
+  },
+  {
+    "part": "lungs",
     "situation": "Tu veux t'éduquer de manière fun sur l'impact du réchauffement climatique",
     "choices": [
       {
