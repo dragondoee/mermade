@@ -18,3 +18,27 @@
 .bad-choice{
     background-color: red;
 }
+
+
+/* Stylisation de la sirène */
+
+g:hover{
+    cursor: pointer;
+    filter: brightness(1.5);
+}
+@font-face {
+    font-family: 'titre';
+    src: url(polices/Super\ Ocean\ Personal\ Use.woff),
+      url(polices/Super\ Ocean\ Personal\ Use.woff2);
+  }
+
+h1{
+font-family: 'titre';
+  font-size: 3rem;
+  color: white;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  bottom: 100px;
+}

@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./accordion.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link
       href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
       rel="stylesheet"
@@ -31,7 +32,9 @@
         </nav>
     </header>
     <div class="accueil">
+      <img src="images/bulles.svg" alt="" class="bulles">
       <h1>Mer Made</h1>
+      <img src="images/bulles2.svg" alt="" class="bulles2">
     </div>
 
     <section class="about">
@@ -58,14 +61,14 @@
     <section class="activites">
       <h2>ses activités</h2>
       <div class="container">
-        <div class="activite learn">
-          <h3>Apprendre</h3>
+        <div class="activite act">
+          <h3 class="montserrat">Agir</h3>
           <p>Enquêter sur le terrain auprès des experts scientifiques.</p>
           <a href="https://www.raceforwater.org/fr/">Plus de détails</a>
         </div>
 
         <div class="activite share">
-          <h3>Partager</h3>
+          <h3 class="montserrat">Partager</h3>
           <p>
             Alerter les décideurs, sensibiliser le grand public, et éduquer les
             jeunes générations.
@@ -73,14 +76,25 @@
           <a href="https://www.raceforwater.org/fr/">Plus de détails</a>
         </div>
 
-        <div class="activite act">
-          <h3>Agir</h3>
+        <div class="activite learn">
+          <h3 class="montserrat">Apprendre</h3>
           <p>
             Promouvoir des solutions aux impacts économiques, environnementaux
             et sociaux durables.
           </p>
           <a href="https://www.raceforwater.org/fr/">Plus de détails</a>
         </div>
+      </div>
+    </section>
+
+    <section class="apropos">
+      <h2>À propos</h2>
+      <div class="container">
+        <p>La nuit de l’info est un événement national où étudiants se réunissent pour relever un défi unique : créer une application web en une seule nuit.</p>
+        <h3>Crédits</h3>
+        <p>Ce site a été réalisé par des étudiants en deuxième année à Champs-sur-Marne dans le cadre de la nuit de l’info.</p>
+        <p><strong>Développement web :</strong> Emilie Desgranges, Gaël  Grandval, Andréa Caneval, Clara Moubarak, Noor Da Silva</p>
+        <p><strong>Création numérique </strong>: Eve Goncalves, Alyssa Karahan, Mélissa Cumur</p>
       </div>
     </section>
 
@@ -167,7 +181,22 @@
         </div>
       </div>
     </section>
+    <footer>
+      <div class="block"></div>
+      <div class="ocean">
+          <img src="images/bateau.svg" alt="" width="100px" class="bateau">
+          <div class="vagues">
+              <div class="vague" id="vague1"></div>
+              <div class="vague" id="vague2"></div>
+              <div class="vague" id="vague3"></div>
+          </div>
+          <h1>Informations météorologiques</h1>
+          <p id="meteo"></p>
+          <div class="continuite"></div>
+      </div>
+  </footer>
 
+  <script src="api.js"></script>
     <script src="./script.js"></script>
     <script src="./accordion.js"></script>
   </body>
