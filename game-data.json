@@ -1,49 +1,52 @@
 [
   {
     "part": "skin",
-    "situation": "Tu t'achètes un sandwich. Pour la même garniture, l'un est emballé dans du plastique et l'autre dans une alternative plus responsable (mais plus cher)",
+    "organe":"La peau",
+    "situation": "Tu t'achètes un sandwich. Pour la même garniture, l'un est emballé dans du plastique et l'autre dans une alternative plus responsable, mais plus chère.",
     "choices": [
       {
-        "choice": "Le plastique est super utile, c'est pas si grave si on en a un peu",
+        "choice": "Le plastique est super utile, ce n'est pas si grave si on en a un peu.",
         "value": -1,
-        "consequence": "Le plastique est super utile, c'est vrai. Mais il est aussi très polluant. En se dégradant, il se transforme en microplastiques qui se retrouvent dans l'eau et la nourriture. C'est pas si grave si on en a un peu, mais si tout le monde pense comme toi, ça peut vite devenir un problème. Race for Water a justement pour mission de réduire la dépendance que nous avons pour le plastique."
+        "consequence": "Le plastique est assez utile, c'est vrai. Mais il est aussi très polluant. En se dégradant, il se transforme en microplastiques qui se retrouvent dans l'eau et la nourriture. Ce n'est pas si grave si on en a un peu, mais si tout le monde pense comme toi, ça peut vite devenir un problème. Race for Water a justement pour mission de réduire la dépendance que nous avons pour le plastique. Le microplastique poisonne les êtres vivants marins et irrite la peau d'Océane qui est aussi contaminée. La peau reflète le mode de vie, dont l'alimentation."
       },
       {
         "choice": "Utiliser l'alternative responsable au plastique.",
         "value": 1,
-        "consequence": "Utiliser l'alternative responsable au plastique est un bon choix. C'est vrai que leur production a un impact, mais il est bien moins important que celui du plastique."
+        "consequence": "Utiliser l'alternative responsable au plastique est un bon choix. C'est vrai que leur production a un impact, mais il est bien moins important que celui du plastique. La quantité de microplastique dans l'eau est réduite. Les êtres vivants marins te remercie de ne pas contribuer à leur empoissonnement. Océane est ravie."
       }
     ]
   },
   {
     "part": "heart",
-    "situation": "Tu veux t'éduquer sur l'impact du réchauffement climatique sur les glaciers. Tu décides de :",
+    "organe":"Le cœur",
+    "situation": "Le réchauffement climatique est un sujet au cœur de l'actualité. Il va influencer le mode de vie des générations à venir. Tu souhaites t'éduquer de manière fun sur son impact.",
     "choices": [
       {
-        "choice": "Partir en croisière éducative pour voir par toi-même ce qu'ils deviennent.",
+        "choice": "Tu pars en croisière éducative pour voir les impacts du réchauffement climatique sur les glaciers.",
         "value": -1,
-        "consequence": "C'est assez ironique de partir en croisière pour se sensibiliser à la fonte des glaces alors que les bateaux contribuent autant que l'aviation au réchauffement climatique. L'ajout de l'eau douce des glaciers à l'eau salée des océans perturbe les courants permettant à ce dernier de réguler sa température. Une des missions de Race For Water est justement de responsabiliser la navigation."
+        "consequence": "C'est assez ironique de partir en croisière pour se sensibiliser à la fonte des glaces alors que les bateaux contribuent autant que l'aviation au réchauffement climatique. L'ajout de l'eau douce des glaciers à l'eau salée des océans perturbe les courants permettant à ce dernier de réguler sa température. Une des missions de Race For Water est justement de responsabiliser la navigation. Océane n'est pas contente de cette nouvelle, elle sent son cœur lâcher."
       },
       {
-        "choice": "Faire une formation de sensibilisation en ligne",
+        "choice": "Tu décides de faire une formation de sensibilisation en ligne.",
         "value": 1,
-        "consequence": "Faire une formation de sensibilisation en ligne est un bon choix. C'est une manière de s'informer avec un impact moins important sur l'environnement. La sensibilisation est une étape essentielle avant de passer à l'action."
+        "consequence": "Faire une formation de sensibilisation en ligne est un bon choix. C'est une manière de s'informer avec un impact moins important sur l'environnement. La sensibilisation est une étape essentielle avant de passer à l'action. En faisant ça, les courants marins ne sont pas perturbés, pour le plus grand plaisir d'Océane."
       }
     ]
   },
   {
     "part": "lungs",
-    "situation": "Tu veux t'éduquer de manière fun sur l'impact du réchauffement climatique",
+    "organe":"Les poumons",
+    "situation": "Ton chargeur de téléphone s'est cassé. Il est inutilisable.",
     "choices": [
       {
-        "choice": "Partir en croisière éducative pour voir les impacts du réchauffement climatique sur les glaciers",
+        "choice": "Tu commandes sur Amazon Prime un nouveau chargeur.",
         "value": -1,
-        "consequence": "C'est assez ironique de partir en croisière pour se sensibiliser à la fonte des glaces alors que les bateaux contribuent autant que l'aviation au réchauffement climatique. L'ajout de l'eau douce des glaciers à l'eau salée des océans perturbe les courants permettant à ce dernier de réguler sa température. Une des missions de Race For Water est justement de responsabiliser la navigation."
+        "consequence": "En commandant sur Amazon, l’article est expédié depuis un entrepôt éloigné. La livraison nécessite des camions, des avions, et parfois plusieurs trajets intermédiaires. Ce processus génère beaucoup de CO2, et une partie est absorbée par les océans. Cela contribue à leur acidification, ce qui menace la biodiversité marine. Les phytoplanctons qui transforment le dioxyde de carbone en oxygène avec le processus de la photosynthèse ne peuvent plus assurer leur rôle dû au manque de nutriments. Cela cause leur mort et donc ralentit le processus. Océane commence à étouffer, elle manque d'oxygène. "
       },
       {
-        "choice": "Faire une formation de sensibilisation en ligne",
+        "choice": "Tu prends les transports en commun pendant 45 min pour acheter un chargeur dans un magasin local.",
         "value": 1,
-        "consequence": "Faire une formation de sensibilisation en ligne est un bon choix. C'est une manière de s'informer avec un impact moins important sur l'environnement. La sensibilisation est une étape essentielle avant de passer à l'action."
+        "consequence": "En prenant les transports en commun pour acheter localement, tu réduis l’empreinte carbone associée à la livraison. Le CO2 émis est moindre et les océans absorbent moins de gaz à effet de serre. Cela aide à maintenir un équilibre chimique dans les eaux marines, protégeant les écosystèmes. Les phytoplanctons transforment le dioxyde de carbone en oxygène avec le processus de la photosynthèse. Il y a suffisamment de nutriments pour qu'ils puissent assurer leur travail. Ils sont heureux d'être aussi importants et Océane respire librement."
       }
     ]
   }
