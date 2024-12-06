@@ -11,6 +11,8 @@ fetch('game-data.json').then(function (response) {
         // ================================================ Changement de section ======================================================
 
         var index = 0
+        var score = 0
+        var totalScore = 0
 
         // Section
         const divSirene = document.querySelector(".sirene")
@@ -34,23 +36,23 @@ fetch('game-data.json').then(function (response) {
                 if (boutonPartie.classList.contains("active")) {
                     divSirene.style.display = "none"
                     divSituation.style.display = "block"
-                
-                data.forEach(function (part) {
-                    if (boutonPartie.classList.contains(part.part)) {
-                        partie = part
-                        console.log(part.part)
-                        // Afficher la situation et les différents choix
-                        document.querySelector(".situation img").src = "img/situation/" + part.part + ".jpg"
-                        document.querySelector(".situation .txt-game p").innerHTML = part.situation
-                        part.choices.forEach(function (choice) {
-                            boutonsChoix[index].innerHTML = choice.choice
-                            index++
-                        })
-                        index = 0
 
-                    }
-                })
-            }
+                    data.forEach(function (part) {
+                        if (boutonPartie.classList.contains(part.part)) {
+                            partie = part
+                            console.log(part.part)
+                            // Afficher la situation et les différents choix
+                            document.querySelector(".situation img").src = ""
+                            document.querySelector(".situation .txt-game p").innerHTML = part.situation
+                            part.choices.forEach(function (choice) {
+                                boutonsChoix[index].innerHTML = choice.choice
+                                index++
+                            })
+                            index = 0
+
+                        }
+                    })
+                }
 
             });
 
@@ -62,12 +64,14 @@ fetch('game-data.json').then(function (response) {
         // Cache situation + Affiche conséquence
         boutonsChoix.forEach(function (boutonChoix) {
             boutonChoix.addEventListener("click", function () {
-                choix = boutonChoix.classList[1][6]
-                console.log(choix)
+                choix = boutonChoix.classList[1][6]-1
                 divSituation.style.display = "none"
                 divConsequence.style.display = "block"
                 // Afficher la conséquence ( texte + image + gain de points)
-                document.querySelector(".consequence .txt-game p").innerHTML = partie.choices[choix].consequence
+                score = partie.choices[choix].value
+                totalScore += score
+                document.querySelector(".consequence img").src = ""
+                document.querySelector(".consequence .txt-game p").innerHTML = partie.choices[choix].consequence                
             });
         });
 
