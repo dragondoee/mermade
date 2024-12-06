@@ -398,10 +398,13 @@ section {
 
 .apropos {
   background-image: url(images/fish.svg);
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   background-color: #00263d;
   color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .apropos .container{
@@ -431,4 +434,10 @@ section {
 
 .apropos h3 {
   font-size: 2.5rem;
+}
+
+
+.faq h2 {
+  font-family: 'titre';
+  font-size: 3rem;
 }
