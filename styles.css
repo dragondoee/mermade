@@ -477,7 +477,6 @@ section {
 }
 
 
-<<<<<<< HEAD
 .api {
   padding: 0;
 }
@@ -583,9 +582,4 @@ section {
     background-position-x: 1500px;
     transform: rotateY('100px');
   }
-=======
-.faq h2 {
-  font-family: 'titre';
-  font-size: 3rem;
->>>>>>> 3c5bb3226e1899ce9947fe8ea84967ca8d233330
 }
