@@ -13,9 +13,14 @@ html, body {
 }
 
 h1,p {
-    background-color: #78DFEC;
+    background-color: #023554;
+    color: white;
     text-align: center;
     margin: 0;
+}
+
+p {
+    padding: 15px;
 }
 
 .loader{
@@ -29,6 +34,12 @@ h1,p {
     position: relative;
     height: 500px;
     width: 100%;
+}
+
+.bateau {
+    position: absolute;
+    margin-left: 15px;
+    z-index: 2;
 }
 
 .vagues {
@@ -50,7 +61,7 @@ h1,p {
 .continuite{
     width: 100%;
     height: 500px;
-    background-color: #78DFEC;
+    background-color: #023554;
 }
 
 #vague1{
