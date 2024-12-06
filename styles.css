@@ -450,6 +450,10 @@ section {
 }
 
 
+.api {
+  padding: 0;
+}
+
 .api h1,
 .api p {
   background-color: var(--color1);
@@ -479,6 +483,7 @@ section {
 .api .vagues {
   position: relative;
   height: 100%;
+  width: 100%;
   background-color: transparent;
 }
 
