@@ -5,12 +5,12 @@ fetch('https://marine-api.open-meteo.com/v1/marine?latitude=45.6037&longitude=-0
     response.json().then(function (data) {
         console.log(data);
 
-        texte.innerHTML += "Hauteur des vagues : " + data.current.wave_height + " " + data.current_units.wave_height +"<br>Direction des vagues : "+data.current.wave_direction+data.current_units.wave_direction+"<br>"+data.current.time+"<br>en Nouvelle-Aquitaine";
+        texte.innerHTML += "Hauteur des vagues : " + data.current.wave_height + " " + data.current_units.wave_height + "<br>Direction des vagues : " + data.current.wave_direction + data.current_units.wave_direction + "<br>" + data.current.time + "<br>en Nouvelle-Aquitaine";
 
         const animation = [
-            { transform: "scaleY("+data.current.wave_height+")" },
+            { transform: "scaleY(" + data.current.wave_height + ")" },
             { transform: "scaleY(0.1)" },
-            { transform: "scaleY("+data.current.wave_height+")" }
+            { transform: "scaleY(" + data.current.wave_height + ")" }
         ]
         const timing = {
             duration: data.current.interval,
@@ -19,7 +19,7 @@ fetch('https://marine-api.open-meteo.com/v1/marine?latitude=45.6037&longitude=-0
 
         const boatAnimation = [
             { transform: "translateY(0%)" },
-            { transform: "translateY("+data.current.wave_height*100+"%)" },
+            { transform: "translateY(" + data.current.wave_height * 100 + "%)" },
             { transform: "translateY(0%)" }
         ]
         const boatTiming = {
@@ -29,7 +29,7 @@ fetch('https://marine-api.open-meteo.com/v1/marine?latitude=45.6037&longitude=-0
 
         document.querySelector('.api .vagues').style.transformOrigin = 'bottom'
         document.querySelector('.api .vagues').animate(animation, timing)
-        bateau.style.bottom = 100-data.current.wave_height*100+"%"
+        bateau.style.bottom = 100 - data.current.wave_height * 100 + "%"
         bateau.animate(boatAnimation, boatTiming)
     })
 })
