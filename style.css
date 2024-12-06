@@ -1,0 +1,117 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: black;
+    margin: 0;
+}
+
+h1,p {
+    background-color: #023554;
+    color: white;
+    text-align: center;
+    margin: 0;
+}
+
+p {
+    padding: 15px;
+    line-height: 1.6;
+}
+
+.loader{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    z-index: 1000;
+}
+
+.ocean{
+    position: relative;
+    height: 500px;
+    width: 100%;
+}
+
+.bateau {
+    position: absolute;
+    margin-left: 15px;
+    z-index: 2;
+    margin-bottom: 20px;
+}
+
+.vagues {
+    position: relative;
+    height: 100%;
+    background-color: transparent;
+}
+
+.vague{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: url(vague.svg);
+    width: 100%;
+    height: 250px;
+    background-size: 1500px 300px;
+}
+
+.continuite{
+    width: 100%;
+    height: 50px;
+    background-color: #023554;
+}
+
+#vague1{
+    bottom: 0px;
+    opacity: 1;
+    z-index: 5;
+    animation: wave 5.5s infinite ease-in-out;
+}
+
+#vague2{
+    bottom: 10px;
+    opacity: 0.5;
+    z-index: 4;
+    animation: wave-inversed 3s infinite ease-in-out;
+}
+
+#vague3{
+    bottom: 15px;
+    opacity: 0.7;
+    z-index: 3;
+    animation: wave 3.5s infinite ease-in-out;
+}
+
+
+@keyframes wave{
+    0% {
+        background-position-x: 1500px;
+        transform: rotateY('100px');
+    }
+    50% {
+        transform: rotateY('0px');
+    }
+    100% {
+        background-position-x: 0px;
+        transform: rotateY('100px');
+    }
+}
+
+@keyframes wave-inversed{
+    0% {
+        background-position-x: 0px;
+        transform: rotateY('100px');
+    }
+    50% {
+        transform: rotateY('0px');
+    }
+    100% {
+        background-position-x: 1500px;
+        transform: rotateY('100px');
+    }
+}
