@@ -1,11 +1,11 @@
 const texte = document.getElementById('meteo');
 const bateau = document.querySelector('.bateau');
 
-fetch('https://marine-api.open-meteo.com/v1/marine?latitude=42.515&longitude=3.1421&current=wave_height,wave_period,wind_wave_height,wind_wave_period&timezone=auto&forecast_days=1').then(response => {
+fetch('https://marine-api.open-meteo.com/v1/marine?latitude=45.6037&longitude=-0.848&current=wave_height,wave_direction,wave_period,wind_wave_height,wind_wave_period,ocean_current_velocity,ocean_current_direction&timezone=auto&forecast_days=1').then(response => {
     response.json().then(function (data) {
         console.log(data);
 
-        texte.innerHTML += "Hauteur des vagues actuelles : " + data.current.wave_height + " " + data.current_units.wave_height + "<br>";
+        texte.innerHTML += "Hauteur des vagues : " + data.current.wave_height + " " + data.current_units.wave_height +"<br>Direction des vagues : "+data.current.wave_direction+data.current_units.wave_direction+"<br>"+data.current.time+"<br>en Nouvelle-Aquitaine";
 
         const animation = [
             { transform: "scaleY("+data.current.wave_height+")" },
@@ -29,7 +29,7 @@ fetch('https://marine-api.open-meteo.com/v1/marine?latitude=42.515&longitude=3.1
 
         document.querySelector('.vagues').style.transformOrigin = 'bottom'
         document.querySelector('.vagues').animate(animation, timing)
-        bateau.style.bottom = 0
+        bateau.style.bottom = 100-data.current.wave_height*100+"%"
         bateau.animate(boatAnimation, boatTiming)
     })
 })
