@@ -84,7 +84,6 @@ nav img {
   background-color: var(--color1);
   border-radius: 30px;
   color: var(--color3);
-
 }
 
 .deepBlue {
@@ -268,6 +267,7 @@ section {
 .about {
   background-color: #023554;
   margin-top: -5px;
+  padding-bottom: 1rem;
 }
 
 .about h2 {
@@ -275,9 +275,7 @@ section {
   font-size: 3rem;
   color: white;
   text-align: left;
-  padding: 0;
   text-transform: uppercase;
-  width: fit-content;
 }
 
 .about img {
@@ -291,12 +289,15 @@ section {
 .about p {
   font-size: 1.2rem;
   color: white;
-  text-align: justify;
-  padding: 0;
-  margin: 0;
   max-width: 800px;
   margin: 0 auto;
   min-width: 400px;
+}
+
+@media (max-width: 500px) {
+  .about p {
+    font-size: .9rem;
+  }
 }
 
 .about .container {
@@ -305,6 +306,26 @@ section {
   justify-content: center;
   align-items: center;
   margin-bottom: 2rem;
+}
+
+.quote {
+  font-family: 'Manrope', sans-serif;
+  font-size: 1.5rem;
+  color: white;
+  text-align: center;
+  max-width: 800px;
+  min-width: 400px;
+  background-color: #48b9c8;
+  padding: 2.5rem;
+  border-radius: 15px;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+.about .bateau {
+  width: 250px;
+  margin-top: 2rem;
+  margin-bottom: 0;
 }
 
 /* SECTION ACTIVITES */
@@ -317,6 +338,9 @@ section {
   background-color: #00263d;
   background-position: 0% 0%, 100% 100%;
   min-height: 100vh;
+  margin-top: -5rem;
+  padding-top: 25vw;
+  padding-bottom: 20rem;
 }
 
 .activites h2 {
@@ -414,10 +438,13 @@ section {
 
 .apropos {
   background-image: url(images/fish.svg);
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   background-color: #00263d;
   color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .apropos .container {
@@ -450,6 +477,7 @@ section {
 }
 
 
+<<<<<<< HEAD
 .api {
   padding: 0;
 }
@@ -555,4 +583,9 @@ section {
     background-position-x: 1500px;
     transform: rotateY('100px');
   }
+=======
+.faq h2 {
+  font-family: 'titre';
+  font-size: 3rem;
+>>>>>>> 3c5bb3226e1899ce9947fe8ea84967ca8d233330
 }
