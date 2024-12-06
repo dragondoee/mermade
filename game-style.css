@@ -1,0 +1,20 @@
+
+/* Section */
+
+.situation{
+    display: none;
+}
+
+.consequence{
+    display: none;
+}
+
+/* Style bien - mal */
+
+.good-choice{
+    background-color: green;
+}
+
+.bad-choice{
+    background-color: red;
+}
