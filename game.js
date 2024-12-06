@@ -20,6 +20,7 @@ fetch('game-data.json').then(function (response) {
         const divSituation = document.querySelector(".situation")
         const divConsequence = document.querySelector(".consequence")
         const divOrgane = document.querySelector(".organe")
+        // const divImg = document.querySelector(".situation img")
 
         // Boutons
         var boutonsPartie = document.querySelectorAll(".sirene-button")
@@ -45,6 +46,9 @@ fetch('game-data.json').then(function (response) {
                             partie = part
                             console.log(part)
                             divOrgane.innerHTML = `<h2 class="organe">${part.organe}</h2>`
+                            console.log(part.part)
+                            // divImg.src = `images/${part.part}-desktop.svg`
+                            
                             // Afficher la situation et les différents choix
                             document.querySelector(".situation .txt-game p").innerHTML = part.situation
                             part.choices.forEach(function (choice) {
@@ -129,7 +133,7 @@ fetch('game-data.json').then(function (response) {
             })
 
             if(compteurPartie==3){
-                document.querySelector("body").innerHTML+='<a href="fin.html?score='+totalScore+'">Voir les résultats</a>'
+                document.querySelector("body").innerHTML+='<a href="fin.html?score='+totalScore+'" class="result">Voir les résultats</a>'
             }
 
         });
