@@ -46,7 +46,6 @@ fetch('game-data.json').then(function (response) {
                             console.log(part)
                             divOrgane.innerHTML = `<h2 class="organe">${part.organe}</h2>`
                             // Afficher la situation et les différents choix
-                            document.querySelector(".situation img").src = ""
                             document.querySelector(".situation .txt-game p").innerHTML = part.situation
                             part.choices.forEach(function (choice) {
                                 boutonsChoix[index].innerHTML = choice.choice
