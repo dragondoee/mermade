@@ -434,7 +434,7 @@ section {
   font-size: 2.5rem;
 }
 
-.api h1,footer p {
+.api h1,.api p {
   background-color: var(--color1);
   color: white;
   text-align: center;
