@@ -1,9 +1,7 @@
-*,
-*::after,
-*::before {
+*, *::after, *::before {
     box-sizing: border-box;
-}
-
+  }
+  
   html {
       overflow-x: hidden;
       scroll-behavior: smooth;
@@ -19,7 +17,7 @@
   }
   
   section {
-      padding: 3rem 10vw;
+      padding: 8rem 10vw;
   }
   
   .accueil {
@@ -77,19 +75,85 @@
   
   .about h2 {
       font-family: 'titre';
-      font-size: 2rem;
+      font-size: 3rem;
       color: white;
       text-align: left;
       padding: 0;
       text-transform: uppercase;
+      width: fit-content;
   }
   
   .about img {
       margin-top: 2rem;
-      width: 30%;
+      width: 160px;
       float: right;
       position: relative;
       bottom: 6rem;
   }
   
+  .about p {
+      font-size: 1.2rem;
+      color: white;
+      text-align: justify;
+      padding: 0;
+      margin: 0;
+      max-width: 800px;
+      margin: 0 auto;
+      min-width: 400px;
+  }
+  
+  .about .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 2rem;
+  }
+  
+  
+  .activites {
+      background-image: url(images/fonds.svg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-color: #00263D;
+      z-index: -1;
+  }
+  
+  .activites h2 {
+      font-family: 'titre';
+      font-size: 3rem;
+      color: white;
+      text-align: right;
+      padding: 0;
+      text-transform: uppercase;
+      margin-top: 5rem;
+  }
+  
+  .activites h3 {
+      font-size: 2.5rem;
+      color: white;
+      padding: 0;
+      text-transform: uppercase;
+      margin-top: 5rem;
+      margin-bottom: 0;
+  }
+  
+  .activites p {
+      font-size: 1.2rem;
+      color: white;
+      max-width: 400px;
+      min-width: 400px;
+  }
+  
+  .activites a {
+      font-size: 1rem;
+      color: white;
+      margin-top: 2rem;
+  }
+  
+  .activites .share {
+      text-align: right;
+      display: flex;
+      flex-direction: column;
+  }
   
