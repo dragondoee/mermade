@@ -73,7 +73,7 @@ nav ul {
 
 .bgNav {
   display: flex;
-  background-color: transparent;
+  background-color: var(--color1);
   border-radius: 50px;
   border: #00263d solid 3px;
 }
