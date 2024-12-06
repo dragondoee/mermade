@@ -289,7 +289,7 @@ section {
 .about p {
   font-size: 1.2rem;
   color: white;
-  max-width: 800px;
+  max-width: 600px;
   margin: 0 auto;
   min-width: 400px;
 }
@@ -318,8 +318,8 @@ section {
   background-color: #29aec0;
   padding: 2.5rem;
   border-radius: 15px;
-  margin-top: 5rem;
-  margin-bottom: 5rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 .about .bateau {
