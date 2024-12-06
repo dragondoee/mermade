@@ -32,15 +32,29 @@ body {
 
 /* ---------------------------------------Nav--------------------------------------- */
 
-nav ul{
+header {
+  position: fixed;
+  top: 0;
+  left: 0; 
+  right: 0; 
+  padding: 2rem;
+  margin: 0 auto;
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  z-index: 10;
+}
+
+nav ul {
   display: flex;
   align-items: center;
   justify-content: center;
   list-style-type: none;
   margin: 0;
-  padding: 2rem;
-  background-color: var(--color4);
+  padding: 0; 
+  background-color: transparent;
 }
+
 
 .bgNav{
   display: flex;
@@ -83,7 +97,7 @@ nav img{
 }
 
 
-.non-active{
+.non-active {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -92,6 +106,7 @@ nav img{
   border-radius: 30px;
   padding-left: 1vh;
   padding-right: 1vh;
+  transform: scale(1); /* État initial sans mise en avant */
 }
 /* ---------------------------------NAV FIN-------------------------------- */
 
@@ -279,11 +294,13 @@ section {
 /* SECTION ACTIVITES */
 
 .activites {
-  background-image: url(images/fonds.svg);
+  background-image: url(images/fonds.svg),
+  url(images/fonds2.svg);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain, 100%;
   background-color: #00263d;
-  z-index: -1;
+  background-position: 0% 0%, 100% 100%;
+  min-height: 100vh;
 }
 
 .activites h2 {
@@ -330,6 +347,7 @@ section {
 }
 
 
+
 /* SECTION FAQ */
 
 .faq {
@@ -373,4 +391,44 @@ section {
 .accordion-container .accordion {
   position: relative;
   top: -32px;
+}
+
+
+/* SECTION A PROPOS */
+
+.apropos {
+  background-image: url(images/fish.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #00263d;
+  color: #fff;
+}
+
+.apropos .container{
+  max-width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.apropos h2 {
+  font-family: 'titre';
+  font-size: 3rem;
+  color: white;
+  text-align: left;
+  padding: 0;
+  text-transform: uppercase;
+}
+
+.apropos p {
+  font-size: 1.2rem;
+  color: white;
+  text-align: justify;
+  max-width: 800px;
+  min-width: 400px;
+}
+
+.apropos h3 {
+  font-size: 2.5rem;
 }
