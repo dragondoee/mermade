@@ -1,0 +1,34 @@
+[
+  {
+    "part": "skin",
+    "situation": "Tu t'achètes un sandwich. Pour la même garniture, l'un est emballé dans du plastique et l'autre dans une alternative plus responsable (mais plus cher)",
+    "choices": [
+      {
+        "choice": "Le plastique est super utile, c'est pas si grave si on en a un peu",
+        "value": -1,
+        "consequence": "Le plastique est super utile, c'est vrai. Mais il est aussi très polluant. En se dégradant, il se transforme en microplastiques qui se retrouvent dans l'eau et la nourriture. C'est pas si grave si on en a un peu, mais si tout le monde pense comme toi, ça peut vite devenir un problème."
+      },
+      {
+        "choice": "Utiliser l'alternative responsable au plastique (leur production a quand même un impact)",
+        "value": 1,
+        "consequence": "Utiliser l'alternative responsable au plastique est un bon choix. C'est vrai que leur production a un impact, mais il est bien moins important que celui du plastique. Il est tout de même important de réfléchir à comment éliminer les microplastiques déjà présents dans l'océan. C'est une des missions de Race for Water."
+      }
+    ]
+  },
+  {
+    "part": "lungs",
+    "situation": "Tu veux t'éduquer de manière fun sur l'impact du réchauffement climatique",
+    "choices": [
+      {
+        "choice": "Partir en croisière éducative pour voir les impacts du réchauffement climatique irl",
+        "value": -1,
+        "consequence": "Il est important de réfléchir à l'impact de la navigation sur l'environnement. Les bateaux contribuent au réchauffement. Le CO2 qu'ils émettent est absorbé par les océans, ce qui les rend plus acides. Une des missions de Race For Water est justement de responsabiliser la navigation."
+      },
+      {
+        "choice": "Faire une formation de sensibilisation en ligne",
+        "value": 1,
+        "consequence": "Faire une formation de sensibilisation en ligne est un bon choix. C'est une manière de s'informer avec un impact moins important sur l'environnement. La sensibilisation est une étape essentielle avant de passer à l'action."
+      }
+    ]
+  }
+]
