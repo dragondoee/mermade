@@ -315,7 +315,7 @@ section {
   text-align: center;
   max-width: 800px;
   min-width: 400px;
-  background-color: #48b9c8;
+  background-color: #29aec0;
   padding: 2.5rem;
   border-radius: 15px;
   margin-top: 5rem;
@@ -445,6 +445,7 @@ section {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  padding-top: 0;
 }
 
 .apropos .container {
@@ -467,7 +468,6 @@ section {
 .apropos p {
   font-size: 1.2rem;
   color: white;
-  text-align: justify;
   max-width: 800px;
   min-width: 400px;
 }
@@ -477,7 +477,6 @@ section {
 }
 
 
-<<<<<<< HEAD
 .api {
   padding: 0;
 }
@@ -583,9 +582,4 @@ section {
     background-position-x: 1500px;
     transform: rotateY('100px');
   }
-=======
-.faq h2 {
-  font-family: 'titre';
-  font-size: 3rem;
->>>>>>> 3c5bb3226e1899ce9947fe8ea84967ca8d233330
 }
