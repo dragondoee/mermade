@@ -1,5 +1,5 @@
 const texte = document.getElementById('meteo');
-const bateau = document.querySelector('footer .bateau');
+const bateau = document.querySelector('.api .bateau');
 
 fetch('https://marine-api.open-meteo.com/v1/marine?latitude=45.6037&longitude=-0.848&current=wave_height,wave_direction,wave_period,wind_wave_height,wind_wave_period,ocean_current_velocity,ocean_current_direction&timezone=auto&forecast_days=1').then(response => {
     response.json().then(function (data) {
@@ -27,8 +27,8 @@ fetch('https://marine-api.open-meteo.com/v1/marine?latitude=45.6037&longitude=-0
             iterations: Infinity,
         }
 
-        document.querySelector('footer .vagues').style.transformOrigin = 'bottom'
-        document.querySelector('footer .vagues').animate(animation, timing)
+        document.querySelector('.api .vagues').style.transformOrigin = 'bottom'
+        document.querySelector('.api .vagues').animate(animation, timing)
         bateau.style.bottom = 100-data.current.wave_height*100+"%"
         bateau.animate(boatAnimation, boatTiming)
     })

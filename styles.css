@@ -434,38 +434,38 @@ section {
   font-size: 2.5rem;
 }
 
-footer h1,footer p {
+.api h1,footer p {
   background-color: var(--color1);
   color: white;
   text-align: center;
   margin: 0;
 }
 
-footer p {
+.api p {
   padding: 15px;
   line-height: 1.6;
 }
 
-footer .ocean{
+.api .ocean{
   position: relative;
   height: 100px;
   width: 100%;
 }
 
-footer .bateau {
+.api .bateau {
   position: absolute;
   margin-left: 15px;
   z-index: 2;
   margin-bottom: 20px;
 }
 
-footer .vagues {
+.api .vagues {
   position: relative;
   height: 100%;
   background-color: transparent;
 }
 
-footer .vague{
+.api .vague{
   position: absolute;
   bottom: 0;
   left: 0;
@@ -475,27 +475,27 @@ footer .vague{
   background-size: 1500px 300px;
 }
 
-footer .continuite{
+.api .continuite{
   width: 100%;
   height: 50px;
   background-color: var(--color1);
 }
 
-footer #vague1{
+.api #vague1{
   bottom: 0px;
   opacity: 1;
   z-index: 5;
   animation: wave 5.5s infinite ease-in-out;
 }
 
-footer #vague2{
+.api #vague2{
   bottom: 10px;
   opacity: 0.5;
   z-index: 4;
   animation: wave-inversed 3s infinite ease-in-out;
 }
 
-footer #vague3{
+.api #vague3{
   bottom: 15px;
   opacity: 0.7;
   z-index: 3;
