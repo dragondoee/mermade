@@ -33,6 +33,7 @@ fetch('game-data.json').then(function (response) {
         // Cache Sirène + Affiche situation
         boutonsPartie.forEach(function (boutonPartie) {
             boutonPartie.addEventListener("click", function () {
+                compteurPartie++
                 // Si le bouton est actif
                 if (boutonPartie.classList.contains("active")) {
                     divSirene.style.display = "none"
@@ -57,6 +58,33 @@ fetch('game-data.json').then(function (response) {
 
             });
 
+            // Support keyboard events
+            boutonPartie.addEventListener("keydown", function (event) {
+                if (event.key === " " || event.key === "Enter") {
+                    // Si le bouton est actif
+                if (boutonPartie.classList.contains("active")) {
+                    compteurPartie++
+                    divSirene.style.display = "none"
+                    divSituation.style.display = "block"
+
+                    data.forEach(function (part) {
+                        if (boutonPartie.classList.contains(part.part)) {
+                            partie = part
+                            console.log(part.part)
+                            // Afficher la situation et les différents choix
+                            document.querySelector(".situation img").src = ""
+                            document.querySelector(".situation .txt-game p").innerHTML = part.situation
+                            part.choices.forEach(function (choice) {
+                                boutonsChoix[index].innerHTML = choice.choice
+                                index++
+                            })
+                            index = 0
+
+                        }
+                    })
+                }
+                }
+            });
         });
 
 
@@ -88,12 +116,13 @@ fetch('game-data.json').then(function (response) {
             boutonsPartie.forEach(function (boutonPartie) {
                 if (boutonPartie.classList.contains(partie.part)) {
                     boutonPartie.classList.remove("active")
-                    compteurPartie++
                     // Changer son style selon son status
                     if(score>0){
                         boutonPartie.classList.add("good-choice")
+                        boutonPartie.classList.remove("sirene-button")
                     } else {
                         boutonPartie.classList.add("bad-choice")
+                        boutonPartie.classList.remove("sirene-button")
                     }
                 }
             })
@@ -102,23 +131,7 @@ fetch('game-data.json').then(function (response) {
                 document.querySelector("body").innerHTML+='<a href="fin.html?score='+totalScore+'">Voir les résultats</a>'
             }
 
-
-
-
-
-
-
         });
-
-
-
-
-
-
-
-
-
-
 
     });
 });
