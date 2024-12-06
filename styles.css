@@ -1,159 +1,198 @@
-*, *::after, *::before {
-    box-sizing: border-box;
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar {
+  width: 0.01rem;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+section {
+  padding: 8rem 10vw;
+}
+
+.accueil {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(images/vague3.svg), url(images/vague2.svg),
+    url(images/épave.svg), url(images/bulles.svg), url(images/bulles2.svg);
+  background-repeat: no-repeat;
+  background-size: contain, contain, contain, 40px, 40px;
+  background-position: 0% 100%, /* vague3 : bas à gauche */ 0% 100%,
+    /* vague2 : bas à gauche */ 0% 95%,
+    /* épave : bas à gauche */ calc(85% - 50px) 25%,
+    /* bulles : en haut à droite */ 20% calc(55% - 50px); /* bulles2 : en bas à gauche */
+  margin: 0;
+  padding: 0;
+  background-color: #7ddeea;
+}
+
+.accueil h1 {
+  font-family: 'titre';
+  font-size: 3rem;
+  color: white;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  bottom: 100px;
+}
+
+@font-face {
+  font-family: 'titre';
+  src: url(polices/Super\ Ocean\ Personal\ Use.woff),
+    url(polices/Super\ Ocean\ Personal\ Use.woff2);
+}
+
+.manrope {
+  font-family: 'Manrope', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+}
+
+.about {
+  background-color: #023554;
+  margin-top: -5px;
+}
+
+.about h2 {
+  font-family: 'titre';
+  font-size: 3rem;
+  color: white;
+  text-align: left;
+  padding: 0;
+  text-transform: uppercase;
+  width: fit-content;
+}
+
+.about img {
+  margin-top: 2rem;
+  width: 160px;
+  float: right;
+  position: relative;
+  bottom: 6rem;
+}
+
+.about p {
+  font-size: 1.2rem;
+  color: white;
+  text-align: justify;
+  padding: 0;
+  margin: 0;
+  max-width: 800px;
+  margin: 0 auto;
+  min-width: 400px;
+}
+
+.about .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.activites {
+  background-image: url(images/fonds.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #00263d;
+  z-index: -1;
+}
+
+.activites h2 {
+  font-family: 'titre';
+  font-size: 3rem;
+  color: white;
+  text-align: right;
+  padding: 0;
+  text-transform: uppercase;
+  margin-top: 5rem;
+}
+
+.activites h3 {
+  font-size: 2.5rem;
+  color: white;
+  padding: 0;
+  text-transform: uppercase;
+  margin-top: 5rem;
+  margin-bottom: 0;
+}
+
+.activites p {
+  font-size: 1.2rem;
+  color: white;
+  max-width: 400px;
+  min-width: 400px;
+}
+
+.activites a {
+  font-size: 1rem;
+  color: white;
+  margin-top: 2rem;
+}
+
+.activites .share {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+}
+
+/* SECTION FAQ */
+
+.faq {
+  background-color: #00263d;
+  color: #fff;
+}
+
+.faq h2 {
+  padding: 24px;
+  margin: 0;
+  font-family: 'titre', sans-serif;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.accordion-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+@media (min-width: 768px) {
+  .accordion-grid {
+    padding: 0 32px;
+    max-width: 1280px;
+    margin: 0 auto;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   }
-  
-  html {
-      overflow-x: hidden;
-      scroll-behavior: smooth;
-    }
-    
-  html::-webkit-scrollbar {
-  width: .01rem;
-  }
-  
-  body {
-      margin: 0;
-      padding: 0;
-  }
-  
-  section {
-      padding: 8rem 10vw;
-  }
-  
-  .accueil {
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-image: 
-          url(images/vague3.svg),
-          url(images/vague2.svg),
-          url(images/épave.svg),
-          url(images/bulles.svg),
-          url(images/bulles2.svg);
-      background-repeat: no-repeat;
-      background-size: contain, contain, contain, 40px, 40px;
-      background-position: 
-          0% 100%,       /* vague3 : bas à gauche */
-          0% 100%,       /* vague2 : bas à gauche */
-          0% 95%,       /* épave : bas à gauche */
-          calc(85% - 50px) 25%,  /* bulles : en haut à droite */
-          20% calc(55% - 50px); /* bulles2 : en bas à gauche */
-      margin: 0;
-      padding: 0;
-      background-color: #7DDEEA;
-  }
-  
-  .accueil h1 {
-      font-family: 'titre';
-      font-size: 3rem;
-      color: white;
-      text-align: center;
-      margin: 0;
-      padding: 0;
-      position: relative;
-      bottom: 100px;
-  }
-  
-  @font-face {
-      font-family: 'titre';
-      src: url(polices/Super\ Ocean\ Personal\ Use.woff),
-      url(polices/Super\ Ocean\ Personal\ Use.woff2);
-  }
-  
-  .manrope {
-    font-family: "Manrope", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: normal;
-    font-style: normal;
-  }
-  
-  .about {
-      background-color: #023554;
-      margin-top: -5px;
-  }
-  
-  .about h2 {
-      font-family: 'titre';
-      font-size: 3rem;
-      color: white;
-      text-align: left;
-      padding: 0;
-      text-transform: uppercase;
-      width: fit-content;
-  }
-  
-  .about img {
-      margin-top: 2rem;
-      width: 160px;
-      float: right;
-      position: relative;
-      bottom: 6rem;
-  }
-  
-  .about p {
-      font-size: 1.2rem;
-      color: white;
-      text-align: justify;
-      padding: 0;
-      margin: 0;
-      max-width: 800px;
-      margin: 0 auto;
-      min-width: 400px;
-  }
-  
-  .about .container {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      margin-bottom: 2rem;
-  }
-  
-  
-  .activites {
-      background-image: url(images/fonds.svg);
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-color: #00263D;
-      z-index: -1;
-  }
-  
-  .activites h2 {
-      font-family: 'titre';
-      font-size: 3rem;
-      color: white;
-      text-align: right;
-      padding: 0;
-      text-transform: uppercase;
-      margin-top: 5rem;
-  }
-  
-  .activites h3 {
-      font-size: 2.5rem;
-      color: white;
-      padding: 0;
-      text-transform: uppercase;
-      margin-top: 5rem;
-      margin-bottom: 0;
-  }
-  
-  .activites p {
-      font-size: 1.2rem;
-      color: white;
-      max-width: 400px;
-      min-width: 400px;
-  }
-  
-  .activites a {
-      font-size: 1rem;
-      color: white;
-      margin-top: 2rem;
-  }
-  
-  .activites .share {
-      text-align: right;
-      display: flex;
-      flex-direction: column;
-  }
-  
+}
+
+.accordion-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.accordion-container img {
+  width: calc(100%);
+}
+
+.accordion-container .accordion {
+  position: relative;
+  top: -32px;
+}

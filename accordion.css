@@ -1,0 +1,50 @@
+.accordion {
+  max-width: 520px;
+  width: calc(100% - 32px);
+  background-color: #00263d;
+  color: #fff;
+  overflow: hidden;
+  border: solid #4b94a5 1px;
+  border-radius: 4px;
+  font-family: 'Manrope', sans-serif;
+}
+
+.accordion button {
+  appearance: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 16px;
+  background-color: transparent;
+  color: #fff;
+  border: none;
+  text-align: left;
+  font-size: 1rem;
+  font-family: inherit;
+  font-weight: bolder;
+}
+
+.accordion button:hover {
+  cursor: pointer;
+}
+
+.accordion svg {
+  width: 16px;
+  transform: rotate(180deg);
+  transition: transform ease 0.3s;
+}
+
+.accordion button[aria-expanded='true'] svg {
+  transform: rotate(0deg);
+}
+
+.accordion p {
+  display: none;
+  padding: 0 16px 16px;
+  margin: 0;
+}
+
+.accordion button[aria-expanded='true'] + p {
+  display: block;
+}
