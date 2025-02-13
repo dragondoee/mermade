@@ -9,6 +9,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-family: 'Manrope', sans-serif;
 }
 
 /* Section */
@@ -19,7 +20,7 @@ body {
 
 .consequence {
     display: none;
-    max-width: 580px;
+    max-width: 800px;
     margin: 0 auto;
     padding: 24px;
     border-radius: 16px;
@@ -60,6 +61,19 @@ h1 {
     margin-top: 120px;
     padding: 0;
 }
+
+.p-game{
+    max-width: 1000px;
+    background-color:rgba(255,255,255, .15);
+    padding: 24px;
+    line-height: 30px;
+    border-radius: 16px;
+    margin: 0 auto;
+    border: 1px solid white;
+
+}
+
+
 
 
 /* Buttons */

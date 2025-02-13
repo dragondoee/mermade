@@ -40,6 +40,7 @@ fetch('game-data.json').then(function (response) {
                 if (boutonPartie.classList.contains("active")) {
                     divSirene.style.display = "none"
                     divSituation.style.display = "block"
+                    document.querySelector(".p-game").style.display = "none";
 
                     data.forEach(function (part) {
                         if (boutonPartie.classList.contains(part.part)) {
@@ -71,14 +72,15 @@ fetch('game-data.json').then(function (response) {
                     compteurPartie++
                     divSirene.style.display = "none"
                     divSituation.style.display = "block"
+                    document.querySelector(".p-game").style.display = "none";
 
                     data.forEach(function (part) {
                         if (boutonPartie.classList.contains(part.part)) {
                             partie = part
                             console.log(part.part)
                             // Afficher la situation et les différents choix
-                            document.querySelector(".situation img").src = "images/"+part.part+".svg"
-                            document.querySelector(".situation .txt-game p").innerHTML = part.situation
+                            document.querySelector(".situation img").src = "images/"+part.part+".svg";
+                            document.querySelector(".situation .txt-game p").innerHTML = part.situation;
                             part.choices.forEach(function (choice) {
                                 boutonsChoix[index].innerHTML = choice.choice
                                 index++
@@ -115,6 +117,7 @@ fetch('game-data.json').then(function (response) {
         boutonSuivant.addEventListener("click", function () {
             divConsequence.style.display = "none"
             divSirene.style.display = "block"
+            document.querySelector(".p-game").style.display = "block";
             // Mettre à jour le status de la partie ( bien ou mal )
 
             // Désactiver le bouton de la partie
